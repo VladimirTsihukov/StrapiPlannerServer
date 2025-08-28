@@ -418,12 +418,12 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     singularName: 'category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     colorHex: Schema.Attribute.String;
-    createAt: Schema.Attribute.DateTime;
     createdAt: Schema.Attribute.DateTime;
+    createdAtLocal: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     descriptionLocal: Schema.Attribute.String;
@@ -436,8 +436,8 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
-    updateAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
+    updatedAtLocal: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     userId: Schema.Attribute.BigInteger;
@@ -452,7 +452,7 @@ export interface ApiSpendEventSpendEvent extends Struct.CollectionTypeSchema {
     singularName: 'spend-event';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     categoryId: Schema.Attribute.String;

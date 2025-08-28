@@ -7,7 +7,7 @@
     "displayName": "Category"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -23,10 +23,10 @@
     "colorHex": {
       "type": "string"
     },
-    "createAt": {
+    "createdAtLocal": {
       "type": "datetime"
     },
-    "updateAt": {
+    "updatedAtLocal": {
       "type": "datetime"
     },
     "userId": {

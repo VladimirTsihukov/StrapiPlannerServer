@@ -11,7 +11,7 @@ module.exports = createCoreService('api::spend-event.spend-event', ({ strapi }) 
     //custom
     async sync(ctx) {
         const user = ctx.state.user
-        const { body } = ctx.request
+        const body = ctx.request.body.map(item => item.data)
         const type = 'api::spend-event.spend-event'
 
         const eventsFromDb = await strapi.db.query(type)
